@@ -1,7 +1,7 @@
 var zhLocale = "zh"; 
 var enLocale = "en"; 
 var zhTitle = "一个都不能死";
-var enTitle = "No body Can Die";
+var enTitle = "Nobody Can Die";
 
 var NativeMsg = {
 	gameOver : 2
