@@ -1,5 +1,7 @@
 var zhLocale = "zh"; 
 var enLocale = "en"; 
+var zhTitle = "一个都不能死";
+var enTitle = "No body Can Die";
 
 // http://hostname/ontheline?lang=en
 // http://hostname/ontheline?lang=zh
@@ -39,6 +41,10 @@ var isEnLocale = function(){
 	return GameLang == enLocale;
 }
 
+var isZhLocale = function(){
+	return GameLang == zhLocale;
+}
+
 var GameConfig = window.GameConfig || {}; 
 
 var GAME_TEXT = {
@@ -69,3 +75,11 @@ var SIZE_DELTA = {
 		widthDelta : 50
 	}
 };
+
+document.title = function(){
+	if (isZhLocale()){
+		return zhTitle;
+	} else {
+		return enTitle;
+	}
+}();
