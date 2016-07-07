@@ -670,6 +670,7 @@ function drawPlayer(o)
 						g.resetting = 100;
 						// g.banad.style.display = "block";
 						g.time = new Date() - g.time;
+						gameObserver.onGameOver(sendGameOverToNative, null);
 					} else {
 						setLevel();
 					}
