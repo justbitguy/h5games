@@ -2117,6 +2117,7 @@ var link, jsGame;
 				gameOver: function() {
 					this.screenFade();
 					this.isGameOver = !0;
+					gameObserver.onGameOver(sendGameOverToNative, null);
 					return this
 				},
 				screenFade: function() {
