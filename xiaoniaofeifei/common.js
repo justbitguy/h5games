@@ -42,12 +42,12 @@ var GameLang = function() {
 	return language;
 }();
 
-var isEnLocale = function(){
-	return GameLang == enLocale;
-}
-
 var isZhLocale = function(){
 	return GameLang == zhLocale;
+}
+
+var isEnLocale = function(){
+	return !isZhLocale();
 }
 
 // send message to webiew.
@@ -73,6 +73,10 @@ var gameObserver = {
 		f(v);
 	}
 };
+
+var imageSrc  = {
+	s1 : isZhLocale() ? "img/s1Zh.png?123" :  "img/s1En.png?123"
+}
 
 document.title = function(){
 	if (isZhLocale()){

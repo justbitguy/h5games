@@ -1898,7 +1898,7 @@ var link, jsGame;
 		src: "img/bg2.jpg"
 	}, {
 		id: "s1",
-		src: "img/s1.png?123"
+		src: imageSrc.s1
 	}]).asyncImage([{
 		id: "s2",
 		src: "img/s2.png"
