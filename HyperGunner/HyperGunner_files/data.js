@@ -19,7 +19,7 @@ var gamedata = {
 		"library/playermissile.png", 
 		"library/playersheet.png", 
 		"library/playpause.png", 
-		"library/pregame.gif", 
+		// "library/pregame.gif", 
 		"library/spark.png", 
 		"library/star.png", 
 		"library/staricon.png", 

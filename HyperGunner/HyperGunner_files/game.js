@@ -262,7 +262,7 @@ function init()
 
 		g.thousandseparator = textformat.thousandseparator;
 		g.banad.style.display = "none";
-		pickAdURL();
+		// pickAdURL();
 
 		g.pausemode = 0;
 		g.audiomode = 1;
@@ -457,7 +457,7 @@ function setTitle()
 	g.resetting = 80;
 	g.canvas.style.backgroundImage = "none";
 	g.canvas.style.backgroundColor = "#142760";
-	g.banad.style.display = "block";
+	// g.banad.style.display = "block";
 };
 
 function setGame()
@@ -668,7 +668,7 @@ function drawPlayer(o)
 						g.mode = "gameover";
 						g.miles = thousandSeparator(m.player.milestohome, g.thousandseparator)
 						g.resetting = 100;
-						g.banad.style.display = "block";
+						// g.banad.style.display = "block";
 						g.time = new Date() - g.time;
 					} else {
 						setLevel();
@@ -1446,7 +1446,7 @@ function loop()
 		switch (g.mode)
 		{
 			case "splash":
-				g.ctx.drawImage(g.splash,0,0);
+				//g.ctx.drawImage(g.splash,0,0);
 				g.resetting --; if (g.resetting < 0) { setTitle(); }
 			break;
 			case "title":
