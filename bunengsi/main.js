@@ -2271,6 +2271,9 @@ var link, jsGame;
 					for (var n = 0; n < t; n++) l.scenes.push(new l.Scene(n))
 				},
 				h = function() {
+					
+					gameObserver.onGameOver(sendGameOverToNative, null);
+					
 					var t = i - 480 >> 1;
 					if (l.time > 10000) {
 //						dp_share(l.time);
