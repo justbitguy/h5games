@@ -1,6 +1,6 @@
 var zhLocale = "zh"; 
 var enLocale = "en"; 
-var zhTitle = "一个都不能死";
+var zhTitle = "一個都不能死";
 var enTitle = "Nobody Can Die";
 
 var NativeMsg = {
@@ -52,16 +52,16 @@ var isZhLocale = function(){
 var GameConfig = window.GameConfig || {}; 
 
 var GAME_TEXT = {
-	startGame : isEnLocale() ? "Start Game" : "开始游戏",
+	startGame : isEnLocale() ? "Start Game" : "開始遊戲",
 	more      : isEnLocale() ? "" : "",
 	returnGame: isEnLocale() ? "Return" : "返回",
-	myScore   : isEnLocale() ? "Score"  : "我的成绩",
+	myScore   : isEnLocale() ? "Score"  : "我的成績",
 	bestScore : isEnLocale() ? "Best: "   : "最佳: ",
 	seconds   : isEnLocale() ? "s" : "秒",
-	newRecord : isEnLocale() ? "New Record" : "新纪录",
-	nightmare : isEnLocale() ? "Nightmare"  : "噩梦模式",
-	hellMode  : isEnLocale() ? "Hell Mode"  : "地狱模式",
-	purgatory : isEnLocale() ? "Purgatory Mode" : "炼狱模式",
+	newRecord : isEnLocale() ? "New Record" : "新紀錄",
+	nightmare : isEnLocale() ? "Nightmare"  : "噩夢模式",
+	hellMode  : isEnLocale() ? "Hell Mode"  : "地獄模式",
+	purgatory : isEnLocale() ? "Purgatory Mode" : "煉獄模式",
 	showoff   : isEnLocale() ? "" : ""
 };
 
