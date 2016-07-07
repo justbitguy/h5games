@@ -822,13 +822,13 @@ function render() {
 }
 
 function renderBeginningText() {
-	renderText(trueCanvas.width / 2 + 1.5 * settings.scale, trueCanvas.height / 2 - 208 * settings.scale-20, 35, "#2c3e50", "\u63a7\u5236", "35px 微软雅黑");
-	renderText(trueCanvas.width / 2 - 85 * settings.scale, trueCanvas.height / 2 - 169 * settings.scale, 20, "#2c3e50", "\u65cb\u8f6c:", "20px 微软雅黑");
-	renderText(trueCanvas.width / 2 - 21 * settings.scale, trueCanvas.height / 2 - 141 * settings.scale+10, 14, "#2c3e50", "\u5de6", "14px 微软雅黑");
-	renderText(trueCanvas.width / 2 + 25 * settings.scale, trueCanvas.height / 2 - 141 * settings.scale+10,14, "#2c3e50", "\u53f3", "14px 微软雅黑");
+	renderText(trueCanvas.width / 2 + 1.5 * settings.scale, trueCanvas.height / 2 - 208 * settings.scale-20, 35, "#2c3e50", "Control", "35px 微软雅黑");
+	renderText(trueCanvas.width / 2 - 85 * settings.scale, trueCanvas.height / 2 - 169 * settings.scale, 20, "#2c3e50", "Spin:", "20px 微软雅黑");
+	renderText(trueCanvas.width / 2 - 21 * settings.scale, trueCanvas.height / 2 - 141 * settings.scale+10, 14, "#2c3e50", "Left", "14px 微软雅黑");
+	renderText(trueCanvas.width / 2 + 25 * settings.scale, trueCanvas.height / 2 - 141 * settings.scale+10,14, "#2c3e50", "Right", "14px 微软雅黑");
 	/*加提示语*/
 	renderText(trueCanvas.width / 2 + 0 * settings.scale, trueCanvas.height / 2 - 121 * settings.scale+20,
-		16, "#2c3e50", "\u70b9\u51fb\u5c4f\u5e55\u5de6\u53f3\u6d4b\uff0c\u5411\u5de6\u3001\u5411\u53f3\u65cb\u8f6c\u516d\u8fb9\u5f62\u3002", "16px 微软雅黑");
+		16, "#2c3e50", "Touch screen left/right side, spin the hexagon to left/right", "16px 微软雅黑");
 	drawKey("right", trueCanvas.width / 2 + 23 * settings.scale - 17.5 * settings.scale, trueCanvas.height / 2 - 195 * settings.scale);
 	drawKey("left", trueCanvas.width / 2 - 23 * settings.scale - 17.5 * settings.scale, trueCanvas.height / 2 - 195 * settings.scale)
 }
@@ -971,9 +971,9 @@ function drawScoreboard() {
 	var a = 50,
 		b = String(score);
 	6 == b.length ? a = 43 : 7 == b.length ? a = 35 : 8 == b.length ? a = 31 : 9 == b.length && (a = 27);
-	0 === gameState ? (renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy, 60, "rgb(236, 240, 241)", String.fromCharCode("0xf04b"), "px FontAwesome"), renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy - 170 * settings.scale, 150, "#2c3e50", "\u8f6c\u4f60\u59b9"), renderText(trueCanvas.width /
-		2 + gdx + 5 * settings.scale, trueCanvas.height / 2 + gdy + 100 * settings.scale, 20, "rgb(44,62,80)", "\u5f00\u59cb!"),ctx.drawImage(doudouIcon,0,0,266,120,trueCanvas.width / 2 -120 * settings.scale, trueCanvas.height / 2 +250 * settings.scale,266*settings.scale,120*settings.scale)) : (0 != gameState && 0 < textOpacity && (textOpacity -= .05, renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy, 60, "rgb(236, 240, 241)", String.fromCharCode("0xf04b"), "px FontAwesome"), renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy - 170 * settings.scale, 150, "#2c3e50", "\u8f6c\u4f60\u59b9"), renderText(trueCanvas.width / 2 + gdx + 5 * settings.scale, trueCanvas.height / 2 + gdy +
-		100 * settings.scale, 20, "rgb(44,62,80)", "\u5f00\u59cb!")), ctx.globalAlpha = scoreOpacity, renderText(trueCanvas.width / 2 + gdx, trueCanvas.height / 2 + gdy, a, "rgb(236, 240, 241)", score));
+	0 === gameState ? (renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy, 60, "rgb(236, 240, 241)", String.fromCharCode("0xf04b"), "px FontAwesome"), renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy - 170 * settings.scale, 150, "#2c3e50", "Spin It"), renderText(trueCanvas.width /
+		2 + gdx + 5 * settings.scale, trueCanvas.height / 2 + gdy + 100 * settings.scale, 20, "rgb(44,62,80)", "Start!"),ctx.drawImage(doudouIcon,0,0,266,120,trueCanvas.width / 2 -120 * settings.scale, trueCanvas.height / 2 +250 * settings.scale,266*settings.scale,120*settings.scale)) : (0 != gameState && 0 < textOpacity && (textOpacity -= .05, renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy, 60, "rgb(236, 240, 241)", String.fromCharCode("0xf04b"), "px FontAwesome"), renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy - 170 * settings.scale, 150, "#2c3e50", "Spin It"), renderText(trueCanvas.width / 2 + gdx + 5 * settings.scale, trueCanvas.height / 2 + gdy +
+		100 * settings.scale, 20, "rgb(44,62,80)", "Start!")), ctx.globalAlpha = scoreOpacity, renderText(trueCanvas.width / 2 + gdx, trueCanvas.height / 2 + gdy, a, "rgb(236, 240, 241)", score));
 	ctx.globalAlpha = 1
 }
 
@@ -1005,7 +1005,7 @@ function showText(a) {
 		paused: "<div class='centeredHeader unselectable'>\u6682\u505c</div><br><div class='unselectable centeredSubHeader'>\u6309 p \u7ee7\u7eed</div><div style='height:100px;line-height:100px;cursor:pointer;'></div>",
 		pausedMobile: "<div class='centeredHeader unselectable'>\u6682\u505c</div><br><div class='unselectable centeredSubHeader'>\u6309 <i class='fa fa-play'></i> \u7ee7\u7eed</div><div style='height:100px;line-height:100px;cursor:pointer;'></div>",
 		start: "<div class='centeredHeader unselectable' style='line-height:80px;'>Press enter to start</div>",
-		gameover: "<div class='centeredHeader unselectable' style='color: #2C3E50;font-weight: bold;font-size: 3rem;'> Game Over</div><div style='color: #2C3E50;margin-top: 5%;font-size: 2.5rem;'>得分</div><div style='font-size: 6rem;color: #2C3E50;'>"+ score +"</div>"
+		gameover: "<div class='centeredHeader unselectable' style='color: #2C3E50;font-weight: bold;font-size: 3rem;'> Game Over</div><div style='color: #2C3E50;margin-top: 5%;font-size: 2.5rem;'>Score</div><div style='font-size: 6rem;color: #2C3E50;'>"+ score +"</div>"
 	};
 	"paused" == a && "mobile" == settings.platform && (a = "pausedMobile");
 	if ("gameover" == a) {

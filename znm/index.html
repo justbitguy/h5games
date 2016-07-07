@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
-		<title>转你妹</title>
+		<title>Spin It</title>
 		<meta charset="UTF-8">
 		<meta name="viewport"
 			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
@@ -63,7 +63,7 @@ html {
 	</head>
 	<body>
 	<div id="moregame2" style="position:fixed;z-index:99; bottom:20px; left:0px; font-size:20px; width:100%; text-align:center;">
-		<a href="javascript:void(0);" onClick="dp_share();">炫耀一下</a>
+		<!-- <a href="javascript:void(0);" onClick="dp_share();">炫耀一下</a> -->
 	</div>
 		<input id="bt-game-id" type="hidden" value="6-zhuannimei">
 		<canvas id="canvas"></canvas>
@@ -104,7 +104,7 @@ var guanzhuurl ="http://mp.weixin.qq.com/s?__biz=MzA4MDIwMzg2MQ==&mid=202110507&
 		window.shareData = {
 		        "imgUrl": "http://mmbiz.qpic.cn/mmbiz/2zpp2iaH4HWGfZsia600gXXlFuZt8TiaEznCicB12RiaoIyn6Pvdufqh3hibUDAxGsAlaricVgWxtY0UbVqU7ibjEL3ZJQ/640",
 		        "timeLineLink":thegameurl,
-		        "tTitle": "转你妹",
+		        "tTitle": "Spin It",
 		        "tContent": "轻松休闲的消除类游戏，小伙伴们快来体验一下！"
 		};
 				
@@ -164,9 +164,9 @@ var guanzhuurl ="http://mp.weixin.qq.com/s?__biz=MzA4MDIwMzg2MQ==&mid=202110507&
 			 var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
 			window.shareData.timeLineLink = thegameurl ;
 			function dp_submitScore(score){
-						myData.score = parseInt(score);
-						myData.scoreName ="获得"+score+"分";		
-						document.title = window.shareData.tTitle = "我在【转你妹】完成了" +score+ "分,转晕了都，有本事来挑战一下，嘻嘻！";
+						// myData.score = parseInt(score);
+						// myData.scoreName ="获得"+score+"分";		
+						// document.title = window.shareData.tTitle = "我在【转你妹】完成了" +score+ "分,转晕了都，有本事来挑战一下，嘻嘻！";
 			}
 			function onShareComplete(res) {
                 if (localStorage.myuid && myData.score != undefined) {
