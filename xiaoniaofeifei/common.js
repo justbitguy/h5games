@@ -1,7 +1,7 @@
 var zhLocale = "zh"; 
 var enLocale = "en"; 
 
-var zhTitle = "小鸟飞飞"; 
+var zhTitle = "像素小鳥"; 
 var enTitle = "Flying Bird";
 
 var NativeMsg = {
