@@ -2151,9 +2151,9 @@ var link, jsGame;
 				var c = a(l.time);
 				e.canvas.fillStyle("#000").font("30px Arial").fillText(c, i - e.canvas.measureText(c).width - 20, 50), t = null
 			}).menu(function() {
-				e.canvas.fillStyle("#FFF").fillScreen().drawImage("logo", i - 480 >> 1, u).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 555, 480, 7), e.buttonLayout.released("difficulty1") ? (l.moduleName = "我的成绩", hideAd(), c(2)) : e.buttonLayout.released("difficulty2") ? (l.moduleName = "噩梦模式", c(3)) : e.buttonLayout.released("difficulty3") ? (l.moduleName = "地狱模式", c(4)) : e.buttonLayout.released("difficulty4") ? (l.moduleName = "炼狱模式", c(5)) : e.buttonLayout.released("rank") && dp_Ranking()
+				e.canvas.fillStyle("#FFF").fillScreen().drawImage("logo", i - 480 >> 1, u).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 555, 480, 7), e.buttonLayout.released("difficulty1") ? (l.moduleName = GAME_TEXT.myScore, hideAd(), c(2)) : e.buttonLayout.released("difficulty2") ? (l.moduleName = GAME_TEXT.nightmare, c(3)) : e.buttonLayout.released("difficulty3") ? (l.moduleName = GAME_TEXT.hellMode, c(4)) : e.buttonLayout.released("difficulty4") ? (l.moduleName = GAME_TEXT.purgatory, c(5)) : e.buttonLayout.released("rank") && dp_Ranking()
 			}).zone(function() {
-				e.canvas.fillStyle("#F00").fillScreen().fillStyle("#FFF").drawString(l.moduleName, 0, u + 110, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑").drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 555, 480, 7).fillStyle("#000").drawString(a(l.time, "秒"), 0, u + 340, e.graphics.VCENTER, !1, null, null, "60px 微软雅黑").fillStyle("#000").drawString("最佳:" + a(l.bestTime, "秒"), 0, u + 400, e.graphics.VCENTER, !1, null, null, "30px 微软雅黑"), l.time > l.bestTime && e.canvas.fillStyle("#FF0").drawString("新纪录", 0, u + 240, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑"), e.buttonLayout.released("return") ? f() : e.buttonLayout.released("restart") && dp_share2(l.time)
+				e.canvas.fillStyle("#F00").fillScreen().fillStyle("#FFF").drawString(l.moduleName, 0, u + 110, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑").drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 555, 480, 7).fillStyle("#000").drawString(a(l.time, GAME_TEXT.seconds), 0, u + 340, e.graphics.VCENTER, !1, null, null, "60px 微软雅黑").fillStyle("#000").drawString(GAME_TEXT.bestScore + a(l.bestTime, GAME_TEXT.seconds), 0, u + 400, e.graphics.VCENTER, !1, null, null, "30px 微软雅黑"), l.time > l.bestTime && e.canvas.fillStyle("#FF0").drawString(GAME_TEXT.newRecord, 0, u + 240, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑"), e.buttonLayout.released("return") ? f() : e.buttonLayout.released("restart") && dp_share2(l.time)
 			}).events.mouseDown(function(e, t, n) {
 				if (l.died) return !1;
 				for (var r = 0, i; i = l.scenes[r]; r++) i.touchStart(t, n)
@@ -2165,7 +2165,7 @@ var link, jsGame;
 				showAd();
 				e.buttonLayout.clear().create({
 					id: "difficulty1",
-					value: "开始游戏",
+					value: GAME_TEXT.startGame,
 					x: i - 272 >> 1,
 					y: u + 200,
 					width: 272,
@@ -2183,7 +2183,7 @@ var link, jsGame;
 					deColor: "#000"
 				}).create({
 					id: "rank",
-					value: "别点这里",
+					value: GAME_TEXT.more,
 					x: i - 272 >> 1,
 					y: u + 160 + 150,
 					width: 272,
@@ -2273,12 +2273,12 @@ var link, jsGame;
 				h = function() {
 					var t = i - 480 >> 1;
 					if (l.time > 10000) {
-						dp_share(l.time);
-						alert("强！你居然坚持了" + l.time / 1000 + "秒！")
+//						dp_share(l.time);
+//						alert("强！你居然坚持了" + l.time / 1000 + "秒！")
 					};
 					e.buttonLayout.clear().create({
 						id: "return",
-						value: "返回",
+						value: GAME_TEXT.returnGame,
 						bgColor: "",
 						bgStroke: "",
 						stroke: "",
@@ -2299,7 +2299,7 @@ var link, jsGame;
 						deColor: "#CCC"
 					}).create({
 						id: "restart",
-						value: "炫耀",
+						value: GAME_TEXT.showoff,
 						bgColor: "",
 						bgStroke: "",
 						stroke: "",
