@@ -54,3 +54,18 @@ var GAME_TEXT = {
 	purgatory : isEnLocale() ? "Purgatory Mode" : "炼狱模式",
 	showoff   : isEnLocale() ? "" : ""
 };
+
+var POS_OFFSET = {
+	startButton : {
+		yOffset : 100
+	},
+	returnButton : {
+		xOffset : 70
+	}
+}; 
+
+var SIZE_DELTA = {
+	returnButton : {
+		widthDelta : 50
+	}
+};

@@ -2167,7 +2167,7 @@ var link, jsGame;
 					id: "difficulty1",
 					value: GAME_TEXT.startGame,
 					x: i - 272 >> 1,
-					y: u + 200,
+					y: u + 200 + POS_OFFSET.startButton.yOffset,
 					width: 272,
 					height: 80,
 					font: "36px 微软雅黑",
@@ -2181,7 +2181,7 @@ var link, jsGame;
 					dex: 272,
 					dey: 0,
 					deColor: "#000"
-				}).create({
+				})/*.create({
 					id: "rank",
 					value: GAME_TEXT.more,
 					x: i - 272 >> 1,
@@ -2199,7 +2199,7 @@ var link, jsGame;
 					dex: 272,
 					dey: 0,
 					deColor: "#000"
-				}).base().gameFlow.menu()
+				})*/.base().gameFlow.menu()
 			};
 			f();
 			var l = {
@@ -2282,9 +2282,9 @@ var link, jsGame;
 						bgColor: "",
 						bgStroke: "",
 						stroke: "",
-						x: t + 100,
+						x: t + 100 + POS_OFFSET.returnButton.xOffset,
 						y: u + 580,
-						width: 100,
+						width: 100 + SIZE_DELTA.returnButton.widthDelta,
 						height: 80,
 						font: "36px 微软雅黑",
 						imageId: "",
@@ -2297,7 +2297,7 @@ var link, jsGame;
 						dex: 272,
 						dey: 0,
 						deColor: "#CCC"
-					}).create({
+					})/*.create({
 						id: "restart",
 						value: GAME_TEXT.showoff,
 						bgColor: "",
@@ -2318,7 +2318,7 @@ var link, jsGame;
 						dex: 272,
 						dey: 0,
 						deColor: "#CCC"
-					}).base().gameFlow.zone();
+					})*/.base().gameFlow.zone();
 					var n = e.localStorage.getItem("NotDieAnyoneBestTime" + l.module);
 					n == null && (n = "0"), l.bestTime = parseInt(n), l.time > l.bestTime && e.localStorage.setItem("NotDieAnyoneBestTime" + l.module, l.time.toString()), dp_submitScore(l.module, l.time * (l.module - 1))
 				}
