@@ -41,12 +41,12 @@ var GameLang = function() {
 	return language;
 }();
 
-var isEnLocale = function(){
-	return GameLang == enLocale;
-}
-
 var isZhLocale = function(){
 	return GameLang == zhLocale;
+}
+
+var isEnLocale = function(){
+	return !isZhLocale();
 }
 
 var GameConfig = window.GameConfig || {}; 
@@ -103,6 +103,10 @@ var gameObserver = {
 		f(v);
 	}
 };
+
+var imageSrc = {
+	logo : isZhLocale() ? "ygdbnsZh.jpg" : "ygdbnsEn.jpg" 
+}
 
 document.title = function(){
 	if (isZhLocale()){

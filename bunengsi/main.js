@@ -2332,7 +2332,7 @@ var link, jsGame;
 }), require(["lib/link", "index"], function(e, t) {
 	e.init(window.innerWidth, window.innerHeight).pushImage([{
 		id: "logo",
-		src: "ygdbns.jpg"
+		src: imageSrc.logo
 	}, {
 		id: "btns1",
 		src: "gdyx.png"
