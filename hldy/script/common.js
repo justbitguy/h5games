@@ -232,8 +232,8 @@ var btGame;
             if (e) {
                 c.html(e)
             } else {
-                var f = Math.round(d * 0x64);
-                c.html("加载进度:" + f + "%")
+                // var f = Math.round(d * 0x64);
+                // c.html("加载进度:" + f + "%")
             }
         };
         if (d >= 0x1) {
