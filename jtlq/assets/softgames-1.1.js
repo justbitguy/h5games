@@ -196,7 +196,7 @@ var SG = {
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sgc, s);
     },
     redirectToPortal:function(){
-         Play68.goHome();
+         // Play68.goHome();
     },
     
     detectPortalUrl:function(){

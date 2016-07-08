@@ -3053,9 +3053,9 @@ var PreLoaderScene = function() {
 };
 
 function myFunc() {
-	var X = "_blank",
-		V = "http://www.play68.com";
-	if (U3e.L5(showSGLinks, U3e.G77) && U3e.D5(inPreloader, U3e.G77)) T0n87[Z87]['open'](V, X);
+	// var X = "_blank",
+	// 	V = "http://www.play68.com";
+	// if (U3e.L5(showSGLinks, U3e.G77) && U3e.D5(inPreloader, U3e.G77)) T0n87[Z87]['open'](V, X);
 }
 var MLE = MLE || {},
 	showSGLinks = U3e.G77,
