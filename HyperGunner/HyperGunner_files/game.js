@@ -144,7 +144,7 @@ function createSprites()
 	g.notportrait = new Image(); g.notportrait.src = "library/notportrait.png";
 	g.volumecontrol = new Image(); g.volumecontrol.src = "library/volumecontrols.png";
 	g.levelflag = new Image(); g.levelflag.src = "library/levelflag.png";
-	g.splash = new Image(); g.splash.src = "library/splash.png";
+	g.splash = new Image(); /*g.splash.src = "library/splash.png";*/
 
 	m.player = new sprite("player", "player", m.spritesheets["playersheet"], 0, 0, 8, 4, 1);
 	m.player.hiscore = 0;
@@ -447,7 +447,7 @@ function mouseUp(event) {
 function setSplash()
 {
 	g.mode = "splash";
-	g.resetting = 100;
+	g.resetting = 5;
 	g.banad.style.display = "none";
 };
 
@@ -474,7 +474,7 @@ function setGame()
 	g.level = 1;
 	g.levelwave = 0;
 	g.wavetype = 0;
-	g.resetting = 1000;
+	g.resetting = 10;
 	g.levelwavemultiplier = 2;
 	g.warplength = 200;
 	g.saucermode = 0;
