@@ -1,7 +1,9 @@
 function GameOver(){
 	base(this,LSprite,[]);
 	this.init();
+	gameObserver.onGameOver(sendGameOverToNative, null);
 }
+
 GameOver.prototype.init = function(){
 	var self = this;
 
