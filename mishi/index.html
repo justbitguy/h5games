@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=480,user-scalable=no,uc-user-scalable=no,target-densitydpi=high-dpi"/>
 <script>
 function play68_init() {
-	updateShare(0);
+	// updateShare(0);
 }
 
 function goHome() {
-	window.location.href = HOME_PATH;
+	// window.location.href = HOME_PATH;
 }
 
 function play68_submitScore(score) {
@@ -18,11 +18,11 @@ function play68_submitScore(score) {
 }
 
 function updateShare(bestScore) {
-	imgUrl = './1.jpg';
-	lineLink = 'http://game2.id87.com/mishi/';
-	descContent = "你觉得你反应很快吗？试试就知道！";
-	updateShareScore(bestScore);
-	appid = '';
+	// imgUrl = './1.jpg';
+	// lineLink = 'http://game2.id87.com/mishi/';
+	// descContent = "你觉得你反应很快吗？试试就知道！";
+	// updateShareScore(bestScore);
+	// appid = '';
 }
 
 function updateShareScore(bestScore) {
@@ -150,55 +150,55 @@ function updateShareScore(bestScore) {
 </style>
 <script>
 document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-	WeixinJSBridge.call('showOptionMenu');
+	// WeixinJSBridge.call('showOptionMenu');
 });
-new Image().src = 'http://game2.id87.com/';
+// new Image().src = 'http://game2.id87.com/';
 </script>
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=34915524" charset="UTF-8"></script>
+<!-- <script type="text/javascript" src="http://tajs.qq.com/stats?sId=34915524" charset="UTF-8"></script> -->
 </head>
 <body onLoad="main()" id="0">
 <div style="text-align:center;">
 <canvas id="jsGameScreen"></canvas> 
 </div>
 <script type="text/javascript">
-var mebtnopenurl = 'http://game2.id87.com/';
+// var mebtnopenurl = 'http://game2.id87.com/';
 function shareFriend() {
-	WeixinJSBridge.invoke("sendAppMessage", {
-		appid: appid,
-		img_url: imgUrl,
-		img_width: "200",
-		img_height: "200",
-		link: lineLink,
-		desc: descContent,
-		title: shareTitle
-	},
-	function(e) {
-		document.location.href = mebtnopenurl;
+	// WeixinJSBridge.invoke("sendAppMessage", {
+	// 	appid: appid,
+	// 	img_url: imgUrl,
+	// 	img_width: "200",
+	// 	img_height: "200",
+	// 	link: lineLink,
+	// 	desc: descContent,
+	// 	title: shareTitle
+	// },
+	// function(e) {
+	// 	document.location.href = mebtnopenurl;
 		
-	})
+	// })
 }
 function shareTimeline() {
-	WeixinJSBridge.invoke("shareTimeline", {
-		img_url: imgUrl,
-		img_width: "200",
-		img_height: "200",
-		link: lineLink,
-		desc: descContent,
-		title: shareTitle
-	},
-	function(e) {
-		document.location.href = mebtnopenurl;
-	})
+	// WeixinJSBridge.invoke("shareTimeline", {
+	// 	img_url: imgUrl,
+	// 	img_width: "200",
+	// 	img_height: "200",
+	// 	link: lineLink,
+	// 	desc: descContent,
+	// 	title: shareTitle
+	// },
+	// function(e) {
+	// 	document.location.href = mebtnopenurl;
+	// })
 }
 function shareWeibo() {
-	WeixinJSBridge.invoke("shareWeibo", {
-		img_url: imgUrl,
-		content: shareTitle + " " + descContent,
-		url: lineLink
-	},
-	function(e) {
-		document.location.href = mebtnopenurl;
-	})
+	// WeixinJSBridge.invoke("shareWeibo", {
+	// 	img_url: imgUrl,
+	// 	content: shareTitle + " " + descContent,
+	// 	url: lineLink
+	// },
+	// function(e) {
+	// 	document.location.href = mebtnopenurl;
+	// })
 }
 function isWeixin() {
 	var e = navigator.userAgent.toLowerCase();
