@@ -120,18 +120,18 @@ N9z87[V87].languages = {
 		"resume": Z8x.O4R,
 		"backToMenu": Z8x.W8R,
 		"moreGames": Z8x.r8R*/
-		"startGame": "开始游戏",
-		"selectLevel": "选择关卡",
-		"easy": "简单",
-		"medium": "普通",
-		"hard": "困难",
-		"youNeed": "您需要",
-		"youNeed2": "分",
-		"points": "分数",
-		"best": "高分",
-		"resume": "继续游戏",
-		"backToMenu": "返回菜单",
-		"moreGames": "更多游戏"
+		"startGame": "Start Game",
+		"selectLevel": "Select Level",
+		"easy": "Simple",
+		"medium": "Normal",
+		"hard": "Hard",
+		"youNeed": "You Need",
+		"youNeed2": "xxxx",
+		"points": "Score",
+		"best": "Best",
+		"resume": "Continue",
+		"backToMenu": "Back to Menu",
+		"moreGames": "More"
 	},
 	"pl": {
 		"startGame": Z8x.V4R,
@@ -5117,10 +5117,10 @@ MainMenu.prototype.init = function() {
 	this.playButton.group.x = U3e.Y8m(MLE.width, 2);
 	this.playButton.group.y = U3e.F8m(MLE.height, 2) + 170;
 	this.playButton.clickCallback = this.startGameClicked.bind(this);
-	this.moreGames = new MenuButton(U3e.m57, currLang.moreGames);
-	this.moreGames.group.x = U3e.A8m(MLE.width, 2);
-	this.moreGames.group.y = U3e.k8m(MLE.height, 2) + 290;
-	this.moreGames.clickCallback = this.moreGamesClicked.bind(this);
+	// this.moreGames = new MenuButton(U3e.m57, currLang.moreGames);
+	// this.moreGames.group.x = U3e.A8m(MLE.width, 2);
+	// this.moreGames.group.y = U3e.k8m(MLE.height, 2) + 290;
+	// this.moreGames.clickCallback = this.moreGamesClicked.bind(this);
 	var Y = U3e.I3R,
 		I = Y = U3e.I3R,
 		u = U3e.I3R;
@@ -5165,13 +5165,13 @@ MainMenu.prototype.init = function() {
 	}.bind(this));
 };
 MainMenu.prototype.update = function() {
-	this.active && (this.playButton.update(), this.moreGames.update(), this.easyButton.update(), this.mediumButton.update(), this.hardButton.update());
+	this.active && (this.playButton.update(), /*this.moreGames.update(), */this.easyButton.update(), this.mediumButton.update(), this.hardButton.update());
 };
 MainMenu.prototype.draw = function() {
 	MLE.context.imageSmoothingEnabled = U3e.G77;
 	this.bg.draw();
 	this.playButton.draw();
-	if (showSGLinks) this.moreGames.draw();
+	// if (showSGLinks) this.moreGames.draw();
 	this.best.draw();
 	this.lvl.draw();
 	this.easyButton.draw();
@@ -5190,10 +5190,10 @@ MainMenu.prototype.startGameClicked = function() {
 		x: -U3e.H3R,
 		alpha: U3e.I3R
 	}, U3e.u57, createjs.Ease.backIn);
-	createjs.Tween.get(this.moreGames.group).wait(U3e.H3R).to({
-		x: -U3e.H3R,
-		alpha: U3e.I3R
-	}, U3e.u57, createjs.Ease.backIn);
+	// createjs.Tween.get(this.moreGames.group).wait(U3e.H3R).to({
+	// 	x: -U3e.H3R,
+	// 	alpha: U3e.I3R
+	// }, U3e.u57, createjs.Ease.backIn);
 	createjs.Tween.get(this.easyButton.group).wait(500).to({
 		x: U3e.o8m(MLE.width, 2),
 		alpha: 1
@@ -5209,9 +5209,9 @@ MainMenu.prototype.startGameClicked = function() {
 		this.active = true;
 	}.bind(this));
 };
-MainMenu.prototype.moreGamesClicked = function() {
-	if (showSGLinks) SG.redirectToPortal();
-};
+// MainMenu.prototype.moreGamesClicked = function() {
+// 	if (showSGLinks) SG.redirectToPortal();
+// };
 MainMenu.prototype.easyButtonClicked = function() {
 	SG_Hooks.start();
 	this.playButton.block = U3e.G77;
