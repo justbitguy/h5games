@@ -5036,7 +5036,7 @@ PreLoaderScene.prototype.init = function() {
 	this.loadingBar0 = new MLE.Sprite(U3e.h07, U3e.I3R, getConst(U3e.m4R));
 	this.loadingBar0.centerPivot();
 	this.group = new MLE.Group;
-	if (showSGLinks) this.group.addChild(this.logo);
+	// if (showSGLinks) this.group.addChild(this.logo);
 	this.group.addChild(this.loadingBar1);
 	this.group.addChild(this.loadingBar0);
 	this.group.x = U3e.C6m(MLE.width, 2);
