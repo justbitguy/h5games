@@ -7,6 +7,8 @@ var NativeMsg = {
 	gameOver : 2
 }
 
+var MsgSeperator = "##";
+
 // http://hostname/ontheline?lang=en
 // http://hostname/ontheline?lang=zh
 var QueryString = function() {
@@ -84,7 +86,7 @@ var SIZE_DELTA = {
 var sendToNative = function(msgType, jsonObj){
 	var msg = msgType.toString(); 
 	if (jsonObj != "" && typeof jsonObj != "undefined" && jsonObj != null){
-		msg += "#" + JSON.stringify(jsonObj); 
+		msg += MsgSeperator + JSON.stringify(jsonObj); 
 	}
 	console.log("msg:" + msg);
 	alert(msg);
