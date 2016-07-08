@@ -25,7 +25,7 @@ var loadData = [
 ,{name : "score_board",path : "style/img_d/score_board.png"}
 ,{name : "start_btn",path : "style/img_d/start_btn.png"}
 ,{name : "continue_btn",path : "style/img_d/continue_btn.png"}
-,{name : "more_btn",path : "style/img_d/more_btn.png"}
+// ,{name : "more_btn",path : "style/img_d/more_btn.png"}
 ,{name : "sound_on",path : "style/img_d/sound_on.png"}
 ,{name : "sound_off",path : "style/img_d/sound_off.png"}
 // ,{name : "face_normal",path : "style/img_d/face_normal.png"}

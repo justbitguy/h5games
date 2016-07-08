@@ -13,13 +13,13 @@ GameOver.prototype.init = function(){
 	background.name = "background";
 	self.addChild(background);
 
-	var shareBitmapData = new LBitmapData(dataList["share"]);
-	var shareBitmap = new LBitmap(shareBitmapData);
-	shareBitmap.x = LGlobal.width-shareBitmap.width;
-	shareBitmap.y = 0;
-	shareBitmap.alpha = 0;
-	Util.fadeIn(shareBitmap, 1);
-	self.addChild(shareBitmap);
+	// var shareBitmapData = new LBitmapData(dataList["share"]);
+	// var shareBitmap = new LBitmap(shareBitmapData);
+	// shareBitmap.x = LGlobal.width-shareBitmap.width;
+	// shareBitmap.y = 0;
+	// shareBitmap.alpha = 0;
+	// Util.fadeIn(shareBitmap, 1);
+	// self.addChild(shareBitmap);
 
 	var hook = new LSprite();
 	var hookBitmapData = new LBitmapData(dataList["hook"],0,0,57,1100);
@@ -45,23 +45,23 @@ GameOver.prototype.init = function(){
 	var continueBtnBitmapData = new LBitmapData(dataList["continue_btn"]);
 	var continueBtnBitmap = new LBitmap(continueBtnBitmapData);
 	self.continueBtn.addChild(continueBtnBitmap);
-	self.continueBtn.x = LGlobal.width/2+continueBtnBitmap.width*0.1;
+	self.continueBtn.x = LGlobal.width/3 ; //+continueBtnBitmap.width*0.1;
 	self.continueBtn.y = LGlobal.height*0.55;
 	self.continueBtn.alpha = 0;
 	Util.fadeIn(self.continueBtn, 1);
 	self.addChild(self.continueBtn);
-	Util.sFloat(self.continueBtn, 0.7);
+	// Util.sFloat(self.continueBtn, 0.2);
 
-	self.moreBtn = new LSprite();
-	var moreBtnBitmapData = new LBitmapData(dataList["more_btn"]);
-	var moreBtnBitmap = new LBitmap(moreBtnBitmapData);
-	self.moreBtn.addChild(moreBtnBitmap);
-	self.moreBtn.x = LGlobal.width/2-moreBtnBitmap.width*1.1;
-	self.moreBtn.y = LGlobal.height*0.55;
-	self.moreBtn.alpha = 0;
-	Util.fadeIn(self.moreBtn, 1);
-	self.addChild(self.moreBtn);
-	Util.sFloat(self.moreBtn, 0.7);
+	// self.moreBtn = new LSprite();
+	// var moreBtnBitmapData = new LBitmapData(dataList["more_btn"]);
+	// var moreBtnBitmap = new LBitmap(moreBtnBitmapData);
+	// self.moreBtn.addChild(moreBtnBitmap);
+	// self.moreBtn.x = LGlobal.width/2-moreBtnBitmap.width*1.1;
+	// self.moreBtn.y = LGlobal.height*0.55;
+	// self.moreBtn.alpha = 0;
+	// Util.fadeIn(self.moreBtn, 1);
+	// self.addChild(self.moreBtn);
+	// Util.sFloat(self.moreBtn, 0.7);
 
 	var scoreTextField = new LTextField();
 	scoreTextField.color = "#fffd71";
@@ -70,7 +70,7 @@ GameOver.prototype.init = function(){
 	scoreTextField.y = LGlobal.height*0.3;
 	scoreTextField.textAlign = "center";
 	scoreTextField.weight = "bolder";
-	scoreTextField.text = "得分:" + gScore.toString();
+	scoreTextField.text = "Score:" + gScore.toString();
 	scoreTextField.font = "黑体";
 	self.scoreTextField = scoreTextField;
 	self.scoreTextField.alpha = 0;
@@ -92,7 +92,7 @@ GameOver.prototype.init = function(){
 	highScoreTextField.y = LGlobal.height*0.4;
 	highScoreTextField.textAlign = "center";
 	highScoreTextField.weight = "bolder";
-	highScoreTextField.text = "最高:" + gHighScore.toString();
+	highScoreTextField.text = "Best:" + gHighScore.toString();
 	highScoreTextField.font = "黑体";
 	self.highScoreTextField = highScoreTextField;
 	self.highScoreTextField.alpha = 0;
@@ -100,7 +100,7 @@ GameOver.prototype.init = function(){
 	self.addChild(highScoreTextField);
 
 	self.continueBtn.addEventListener(LMouseEvent.MOUSE_DOWN, self.onContinueBtnDown);
-	self.moreBtn.addEventListener(LMouseEvent.MOUSE_DOWN, self.onMoreBtnDown);
+	// self.moreBtn.addEventListener(LMouseEvent.MOUSE_DOWN, self.onMoreBtnDown);
 	// updateShare(gScore);Play68.setRankingScoreDesc(gScore);
 	//dp_submitScore(gScore);
 };

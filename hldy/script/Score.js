@@ -92,7 +92,7 @@ Score.prototype.showScoreTips = function(score, fish) {
 }
 Score.prototype.showScore = function(score) {
 	var self = this;
-	var s = "分数：" + score.toString();
+	var s = "Score：" + score.toString();
 	self.theTextField.text = s;
 }
 Score.prototype.showHooks = function(number) {
