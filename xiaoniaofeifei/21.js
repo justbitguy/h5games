@@ -1890,7 +1890,10 @@ var link, jsGame;
 	var B = navigator.userAgent.toLowerCase(),
 		C = !1;
 	0 <= B.indexOf("android") && 0 <= B.indexOf("chrome") && (C = !0);
-	g.init(320, 550).pushImage([{
+
+	var initWidth = screen.availWidth > 500 ? 500 : screen.availWidth; 
+	var initHeight = screen.availHeight;
+	g.init(initWidth, initHeight).pushImage([{
 		id: "bg1",
 		src: "img/bg1.jpg"
 	}, {
@@ -1919,8 +1922,9 @@ var link, jsGame;
 		var b, e, n, h, j, p, s, t;
 		window.scrollTo(0, 1);
 		var w, E;
-		g.canvas.screen.setHeight(550 <
-			window.innerHeight ? 550 : window.innerHeight);
+		// g.canvas.screen.setHeight(550 <
+		// 	window.innerHeight ? 550 : window.innerHeight);
+		g.canvas.screen.setHeight(window.innerHeight);
 		w = g.canvas.screen.getWidth();
 		E = g.canvas.screen.getHeight();
 		_newDate = Date.now();
