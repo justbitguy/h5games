@@ -23,8 +23,8 @@ var loadData = [
 ,{name : "hook",path : "style/img_d/hook.png"}
 ,{name : "score_hook",path : "style/img_d/score_hook.png"}
 ,{name : "score_board",path : "style/img_d/score_board.png"}
-,{name : "start_btn",path : "style/img_d/start_btn.png"}
-,{name : "continue_btn",path : "style/img_d/continue_btn.png"}
+,{name : "start_btn",path : imageSrc.startBtn}
+,{name : "continue_btn",path : imageSrc.continueBtn}
 // ,{name : "more_btn",path : "style/img_d/more_btn.png"}
 ,{name : "sound_on",path : "style/img_d/sound_on.png"}
 ,{name : "sound_off",path : "style/img_d/sound_off.png"}
@@ -32,7 +32,7 @@ var loadData = [
 // ,{name : "face_happy",path : "style/img_d/face_happy.png"}
 // ,{name : "face_sad",path : "style/img_d/face_sad.png"}
 ,{name : "bubble",path : "style/img_d/bubble.png"}
-,{name : "share",path : "style/img_d/share.jpg"}
+// ,{name : "share",path : "style/img_d/share.jpg"}
 ,{name : "logo",path : "style/img_d/logo.png"}
 ,{name : "background",path : "style/img_d/background.jpg"}
 ,{name : "start_bg",path : "style/img_d/start_bg.jpg"}
