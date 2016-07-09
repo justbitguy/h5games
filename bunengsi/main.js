@@ -2151,9 +2151,9 @@ var link, jsGame;
 				var c = a(l.time);
 				e.canvas.fillStyle("#000").font("30px Arial").fillText(c, i - e.canvas.measureText(c).width - 20, 50), t = null
 			}).menu(function() {
-				e.canvas.fillStyle("#FFF").fillScreen().drawImage("logo", i - 480 >> 1, u).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 555, 480, 7), e.buttonLayout.released("difficulty1") ? (l.moduleName = GAME_TEXT.myScore, hideAd(), c(2)) : e.buttonLayout.released("difficulty2") ? (l.moduleName = GAME_TEXT.nightmare, c(3)) : e.buttonLayout.released("difficulty3") ? (l.moduleName = GAME_TEXT.hellMode, c(4)) : e.buttonLayout.released("difficulty4") ? (l.moduleName = GAME_TEXT.purgatory, c(5)) : e.buttonLayout.released("rank") && dp_Ranking()
+				e.canvas.fillStyle("#FFF").fillScreen().drawImage("logo", i - 480 >> 1, u)/*.drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 99, 480, 7, i - 480 >> 1, u + 555, 480, 7)*/, e.buttonLayout.released("difficulty1") ? (l.moduleName = GAME_TEXT.myScore, hideAd(), c(2)) : e.buttonLayout.released("difficulty2") ? (l.moduleName = GAME_TEXT.nightmare, c(3)) : e.buttonLayout.released("difficulty3") ? (l.moduleName = GAME_TEXT.hellMode, c(4)) : e.buttonLayout.released("difficulty4") ? (l.moduleName = GAME_TEXT.purgatory, c(5)) : e.buttonLayout.released("rank") && dp_Ranking()
 			}).zone(function() {
-				e.canvas.fillStyle("#F00").fillScreen().fillStyle("#FFF").drawString(l.moduleName, 0, u + 110, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑").drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 555, 480, 7).fillStyle("#000").drawString(a(l.time, GAME_TEXT.seconds), 0, u + 340, e.graphics.VCENTER, !1, null, null, "60px 微软雅黑").fillStyle("#000").drawString(GAME_TEXT.bestScore + a(l.bestTime, GAME_TEXT.seconds), 0, u + 400, e.graphics.VCENTER, !1, null, null, "30px 微软雅黑"), l.time > l.bestTime && e.canvas.fillStyle("#FF0").drawString(GAME_TEXT.newRecord, 0, u + 240, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑"), e.buttonLayout.released("return") ? f() : e.buttonLayout.released("restart") && dp_share2(l.time)
+				e.canvas.fillStyle("#F00").fillScreen().fillStyle("#FFF").drawString(l.moduleName, 0, u + 110, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑")/*.drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 140, 480, 7).drawImage("btns1", 0, 106, 480, 7, i - 480 >> 1, u + 555, 480, 7)*/.fillStyle("#000").drawString(a(l.time, GAME_TEXT.seconds), 0, u + 340, e.graphics.VCENTER, !1, null, null, "60px 微软雅黑").fillStyle("#000").drawString(GAME_TEXT.bestScore + a(l.bestTime, GAME_TEXT.seconds), 0, u + 400, e.graphics.VCENTER, !1, null, null, "30px 微软雅黑"), l.time > l.bestTime && e.canvas.fillStyle("#FF0").drawString(GAME_TEXT.newRecord, 0, u + 240, e.graphics.VCENTER, !1, null, null, "50px 微软雅黑"), e.buttonLayout.released("return") ? f() : e.buttonLayout.released("restart") && dp_share2(l.time)
 			}).events.mouseDown(function(e, t, n) {
 				if (l.died) return !1;
 				for (var r = 0, i; i = l.scenes[r]; r++) i.touchStart(t, n)
@@ -2162,7 +2162,7 @@ var link, jsGame;
 				for (var r = 0, i; i = l.scenes[r]; r++) i.touchStart(t, n)
 			});
 			var f = function() {
-				showAd();
+				// showAd();
 				e.buttonLayout.clear().create({
 					id: "difficulty1",
 					value: GAME_TEXT.startGame,
